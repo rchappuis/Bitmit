@@ -11,7 +11,7 @@ import com.c0dege3k.bitmit.dummy.DummyContent;
 
 /**
  * A fragment representing a single Product detail screen.
- * This fragment is either contained in a {@link ProductListActivity}
+ * This fragment is either contained in a {@link CategoryListActivity}
  * in two-pane mode (on tablets) or a {@link ProductDetailActivity}
  * on handsets.
  */

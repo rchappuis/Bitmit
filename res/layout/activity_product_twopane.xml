@@ -8,7 +8,7 @@
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
     android:showDividers="middle"
-    tools:context=".ProductListActivity" >
+    tools:context=".CategoryListActivity" >
 
     <!--
     This layout is a two-pane layout for the Products
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/product_list"
-        android:name="com.c0dege3k.bitmit.ProductListFragment"
+        android:name="com.c0dege3k.bitmit.CategoryListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

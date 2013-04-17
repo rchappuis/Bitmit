@@ -10,7 +10,7 @@ import android.view.MenuItem;
  * An activity representing a single Product detail screen. This
  * activity is only used on handset devices. On tablet-size devices,
  * item details are presented side-by-side with a list of items
- * in a {@link ProductListActivity}.
+ * in a {@link CategoryListActivity}.
  * <p>
  * This activity is mostly just a 'shell' activity containing nothing
  * more than a {@link ProductDetailFragment}.
@@ -59,7 +59,7 @@ public class ProductDetailActivity extends FragmentActivity {
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpTo(this, new Intent(this, ProductListActivity.class));
+                NavUtils.navigateUpTo(this, new Intent(this, CategoryListActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);
