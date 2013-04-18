@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.c0dege3k.bitmit.dummy.DummyContent;
-
 /**
  * A fragment representing a single Product detail screen.
  * This fragment is either contained in a {@link CategoryListActivity}
@@ -23,9 +21,9 @@ public class ProductDetailFragment extends Fragment {
     public static final String ARG_ITEM_ID = "item_id";
 
     /**
-     * The dummy content this fragment is presenting.
+     * The item content this fragment is presenting.
      */
-    private DummyContent.DummyItem mItem;
+    private ListingContent.ItemListing mItem;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -37,13 +35,8 @@ public class ProductDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments().containsKey(ARG_ITEM_ID)) {
-            // Load the dummy content specified by the fragment
-            // arguments. In a real-world scenario, use a Loader
-            // to load content from a content provider.
-            mItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
-        }
+        
+        
     }
 
     @Override
@@ -53,7 +46,8 @@ public class ProductDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.product_detail)).setText(mItem.content);
+            ((TextView) rootView.findViewById(R.id.product_title)).setText(mItem.content);
+            ((TextView) rootView.findViewById(R.id.product_price)
         }
 
         return rootView;

@@ -1,9 +1,39 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/product_detail"
-    style="?android:attr/textAppearanceLarge"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_details"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:textIsSelectable="true"
-    tools:context=".ProductDetailFragment" />
+    android:layout_height="match_parent" >
+        
+    <ImageView android:id="@+id/product_thumbnail"
+        android:padding="@dimen/detail_margin"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/product_title"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/detail_margin"
+        android:textIsSelectable="true"
+        android:layout_toRightOf="@id/product_thumbnail"
+        tools:context=".ProductDetailFragment" />
+    
+    <TextView android:id="@+id/product_price_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_price_text"
+        android:layout_below="@id/product_title" />
+        
+    <TextView android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/product_price_title" />
+        
+    <TextView android:id="@+id/product_descr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/detail_margin"
+        android:layout_below="@id/product_price" />
+    
+</RelativeLayout>
